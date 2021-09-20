@@ -1,0 +1,20 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <input type="text" id="textnumber1234" value="5"/>
+        <br><br>
+        <input type="button" value="check even or odd" onclick="checkOE()"/>
+        <br><br>
+        <label id="lbmessage"></label>
+    </body>
+</html>
+<script>
+    function checkOE(){
+        var n=document.getElementById('textnumber').value;
+        if(n%2==0)
+        document.getElementById('lbmessage').innerHTML=n+"EVEN";
+        else
+        document.getElementById('lbmessage').innerHTML=n+"ODD";
+
+    }
