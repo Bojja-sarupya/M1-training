@@ -1,0 +1,46 @@
+create table sample(id int,text varchar(200));
+insert into sample(id,text) values(1,'ravi');
+insert into sample(id,text) values(1,'geetha');
+insert into sample(id,text) values(1,'sita');
+insert into sample(id,text) values(1,'keerthi');
+insert into sample(id,text) values(1,'raju');
+select * from sample
+select * from sample where id=1
+select text as name from sample where text='raju'
+select * from empsal where empsal between 1000 and 5000
+select * from empsal where id in(1,2,3);
+select * from sample where text LIKE 'sa%';
+select empname pipesymbol(concatinate)'-----'pipesymbol empsal as empendsal from emp
+LOGICAL OPERATOR(AND,OR,NOT)::
+select * from emp where empsal<5000 and empsal>2000
+select * from emp where empname is NULL;
+DISTINCT::
+select DISTINCT * from sample;
+select * from sample order by id desc
+select count(*) from sample;
+select SUM(empsal) from emp;
+select AVG(empsal) from emp;
+select MAX(empsal) from emp;
+select MIN(empsal) from emp;
+select text from sample group by text having count(text)>1
+create table singlefunction(id int,decvalue numeric(6,8),INTvalue int)
+insert into singlefunction(id,decvalue,INTvalue) values(1,2.5,4);
+select TRUNC(decvalue,1) from singlefunction;
+select decvalue srom singlefunction;
+drop table singlefunction;
+select ROUND(decvalue,1) from singlefunction;
+select CEIL(33.65) from dual;
+select FLOOR(33.65) from dual;
+select ABS(33.65) from dual;
+select POWER(2,3) from dual;
+select CURRENT_DATE() from dual;
+select CURRENT_TIMESTAMP() from dual;
+select ADD_MONTHS(CURRENT_DATE(),1) from dual;
+select MONTHS_BETWEEN('20-DEC-2021','20-OCT-2021') from dual;
+CONVERSION FUNCTION::
+select TO_CHAR(sysdate,'dd-mm-yyyy')from dual;
+select sysdate from dual;
+select case when (MOD(4,2)==0) then 'even' else 'odd' end from dual;
+
+
+
